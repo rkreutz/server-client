@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1360805367 source:c:\users\rodrigo\documents\programacao\ece297\record_structure\main.c
+	<stdio.h>
+	<stdlib.h>
+	"structure.h"
+
+1360801627 c:\users\rodrigo\documents\programacao\ece297\record_structure\structure.h
+

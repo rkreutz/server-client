@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1365918022 source:c:\users\rodrigo\documents\programacao\ece297\storage.c
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<errno.h>
+	<pthread.h>
+	"storage.h"
+	"utils.h"
+
+1360185656 c:\users\rodrigo\documents\programacao\ece297\storage.h
+	<stdint.h>
+
+1365703490 c:\users\rodrigo\documents\programacao\ece297\utils.h
+	<stdio.h>
+	"storage.h"
+
+1365704292 source:c:\users\rodrigo\documents\programacao\ece297\utils.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<time.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<unistd.h>
+	<pthread.h>
+	"utils.h"
+
+1366064445 source:c:\users\rodrigo\documents\programacao\ece297\tester\fulltester\main.c
+	<stdlib.h>
+	<unistd.h>
+	<stdio.h>
+	<string.h>
+	<fcntl.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<sys/mman.h>
+	<errno.h>
+	<sys/socket.h>
+	<pthread.h>
+	<time.h>
+	<math.h>
+	<sys/shm.h>
+	<sys/ipc.h>
+	<netdb.h>
+	<assert.h>
+	<signal.h>
+	<sys/time.h>
+	<time.h>
+	"../../storage.h"
+	"../../utils.h"
+

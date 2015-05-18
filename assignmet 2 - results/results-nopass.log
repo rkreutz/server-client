@@ -1,0 +1,25 @@
+main.c:514:F:conninvalid:test_conninvalid_connectinvalidparam:0: storage_connect with invalid param not setting errno properly.
+
+main.c:521:F:conninvalid:test_conninvalid_disconnectinvalidparam:0: storage_disconnect with invalid param should fail.
+
+main.c:357:F:auth:test_auth_with_null_params:0: storage_auth() with NULL username not setting errno to ERR_INVALID_PARAM
+
+main.c:540:F:getinvalid:test_getinvalid_invalidtable:0: storage_get with invalid param not setting errno properly.
+
+main.c:550:F:getinvalid:test_getinvalid_invalidkey:0: storage_get with invalid param not setting errno properly.
+
+main.c:558:F:getinvalid:test_getinvalid_invalidrecord:0: storage_get with invalid param not setting errno properly.
+
+main.c:576:F:getinvalid:test_getinvalid_badtable:0: storage_get with bad table name not setting errno properly.
+
+main.c:585:F:getinvalid:test_getinvalid_badkey:0: storage_get with bad key name not setting errno properly.
+
+main.c:620:F:setinvalid:test_setinvalid_invalidtable:0: storage_set with invalid param not setting errno properly.
+
+main.c:651:F:setinvalid:test_setinvalid_badtable:0: storage_set with bad table name not setting errno properly.
+
+main.c:660:F:setinvalid:test_setinvalid_badkey:0: storage_set with bad key name should fail.
+
+main.c:680:F:setmissing:test_setmissing_deletemissingkey:0: Deleting a missing key not setting errno properly.
+
+main.c:1184:F:set:test_set_delete:0: Error deleting the key/value pair.

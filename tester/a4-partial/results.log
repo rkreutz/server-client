@@ -1,0 +1,27 @@
+Running suite a4-partial
+main.c:342:P:sanity:test_sanity_filemod:0: Passed
+main.c:357:P:configerror:test_configerror_nocomma:0: Passed
+main.c:364:P:configerror:test_configerror_negsize:0: Passed
+main.c:382:P:config:test_config_onetable:0: Passed
+main.c:398:E:conn:test_conn_basic:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:413:P:conninvalid:test_conninvalid_connectinvalidparam:0: Passed
+main.c:149:S:getinvalid:test_getinvalid_badtable:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:getmissing:test_getmissing_missingtable:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setinvalid:test_setinvalid_invalidtable:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setinvalid:test_setinvalid_badkey:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setinvalidcomplex:test_setinvalidcomplex_missingcolumn:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setmissing:test_setmissing_missingtable:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setget:test_setget_posint:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:query:test_query_int0:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:query:test_query_int1:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:set:test_set_deleteint:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:set:test_set_deletestr:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setcomplex:test_setcomplex_deletethreecols:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:setcomplex:test_setcomplex_updatethreecols:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:transaction:test_transaction_pass1:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:transaction:test_transaction_fail1:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:concurrency:test_concurrency_get:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:concurrency:test_concurrency_setget:0: (after this point) Received signal 11 (Segmentation fault)
+main.c:149:S:concurrency:test_concurrency_txpass:0: (after this point) Received signal 11 (Segmentation fault)
+Results for all suites run:
+20%: Checks: 24, Failures: 0, Errors: 19

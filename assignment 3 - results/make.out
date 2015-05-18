@@ -1,0 +1,42 @@
+cc -g -Wall -c storage.c -o storage.o
+storage.c: In function 'storage_get':
+storage.c:126: warning: passing argument 1 of 'table_parser' discards qualifiers from pointer target type
+utils.h:153: note: expected 'char *' but argument is of type 'const char *'
+storage.c:130: warning: passing argument 1 of 'key_parser' discards qualifiers from pointer target type
+utils.h:154: note: expected 'char *' but argument is of type 'const char *'
+storage.c: In function 'storage_set':
+storage.c:182: warning: passing argument 1 of 'table_parser' discards qualifiers from pointer target type
+utils.h:153: note: expected 'char *' but argument is of type 'const char *'
+storage.c:186: warning: passing argument 1 of 'key_parser' discards qualifiers from pointer target type
+utils.h:154: note: expected 'char *' but argument is of type 'const char *'
+storage.c: In function 'storage_query':
+storage.c:272: warning: passing argument 1 of 'table_parser' discards qualifiers from pointer target type
+utils.h:153: note: expected 'char *' but argument is of type 'const char *'
+storage.c:285: warning: implicit declaration of function 'iscntrl'
+cc -g -Wall -c utils.c -o utils.o
+utils.c: In function 'table_parser':
+utils.c:287: warning: unused variable 'x'
+utils.c: In function 'columns_parser':
+utils.c:426: warning: implicit declaration of function 'isalnum'
+utils.c:460: warning: implicit declaration of function 'isdigit'
+utils.c: In function 'erase_space_ends':
+utils.c:500: warning: implicit declaration of function 'isblank'
+utils.c: In function 'query_parsing':
+utils.c:662: warning: function returns address of local variable
+ar rcs libstorage.a storage.o utils.o
+cc -g -Wall -c server.c -o server.o
+server.c: In function 'checkColumns':
+server.c:98: warning: implicit declaration of function 'isdigit'
+cc -g -Wall -lcrypt server.o utils.o -o server
+cc -g -Wall -c client.c -o client.o
+In file included from client.c:16:
+utils.h: In function 'die':
+utils.h:99: warning: implicit declaration of function 'exit'
+utils.h:99: warning: incompatible implicit declaration of built-in function 'exit'
+cc -g -Wall -lcrypt client.o libstorage.a -o client
+client.o: In function `main':
+XYZ/output/asst-3/marking/storage-asst3_cd-078_de8b37810368ec4d654068b1f0e35ce5/build/storage-asst3/src/client.c:99: warning: the `gets' function is dangerous and should not be used.
+cc -g -Wall -c encrypt_passwd.c -o encrypt_passwd.o
+cc -g -Wall -lcrypt encrypt_passwd.o utils.o -o encrypt_passwd
+make: `server' is up to date.
+make: `libstorage.a' is up to date.

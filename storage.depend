@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1365709879 source:c:\users\rodrigo\documents\programacao\ece297\server.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<string.h>
+	<assert.h>
+	<signal.h>
+	<sys/time.h>
+	<time.h>
+	<pthread.h>
+	<sys/mman.h>
+	<sys/shm.h>
+	<sys/ipc.h>
+	"utils.h"
+
+1365703490 c:\users\rodrigo\documents\programacao\ece297\utils.h
+	<stdio.h>
+	"storage.h"
+
+1360185656 c:\users\rodrigo\documents\programacao\ece297\storage.h
+	<stdint.h>
+
+1365704292 source:c:\users\rodrigo\documents\programacao\ece297\utils.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<time.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<unistd.h>
+	<pthread.h>
+	"utils.h"
+
+1365583318 source:c:\users\rodrigo\documents\programacao\ece297\client.c
+	<errno.h>
+	<stdio.h>
+	<sys/time.h>
+	<string.h>
+	<time.h>
+	<pthread.h>
+	"storage.h"
+	"utils.h"
+
+1365671017 source:c:\users\rodrigo\documents\programacao\ece297\storage.c
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<errno.h>
+	<pthread.h>
+	"storage.h"
+	"utils.h"
+
+1365583318 source:c:\users\rodrigo\documents\programacao\ece297 - communication and design\client.c
+	<errno.h>
+	<stdio.h>
+	<sys/time.h>
+	<string.h>
+	<time.h>
+	<pthread.h>
+	"storage.h"
+	"utils.h"
+
+1360185656 c:\users\rodrigo\documents\programacao\ece297 - communication and design\storage.h
+	<stdint.h>
+
+1367266128 c:\users\rodrigo\documents\programacao\ece297 - communication and design\utils.h
+	<stdio.h>
+	"storage.h"
+
+1365918022 source:c:\users\rodrigo\documents\programacao\ece297 - communication and design\storage.c
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<errno.h>
+	<pthread.h>
+	"storage.h"
+	"utils.h"
+
+1365704292 source:c:\users\rodrigo\documents\programacao\ece297 - communication and design\utils.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<time.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<unistd.h>
+	<pthread.h>
+	"utils.h"
+

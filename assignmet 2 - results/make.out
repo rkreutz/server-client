@@ -1,0 +1,11 @@
+cc -g -Wall -c server.c -o server.o
+server.c: In function 'main':
+server.c:163: warning: unused variable 'aux'
+cc -g -Wall -c utils.c -o utils.o
+utils.c: In function 'process_config_line':
+utils.c:79: warning: unused variable 'items'
+utils.c: In function 'table_parser':
+utils.c:263: warning: unused variable 'x'
+cc -g -Wall -lcrypt server.o utils.o -o server
+cc -g -Wall -c storage.c -o storage.o
+ar rcs libstorage.a storage.o utils.o

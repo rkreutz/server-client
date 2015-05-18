@@ -1,0 +1,83 @@
+ln -sf ../../src/server
+ln -s ../../src/storage.h
+cc -g -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include   -I ../../src -g -Wall -lglib-2.0   main.c ../../src/libstorage.a /usr/lib/libcrypt.so /usr/lib/libcheck.a /usr/lib/libm.so -o main 
+main.c:1206: warning: 'test_misc_noserver' defined but not used
+rm -rf ./mydata
+for conf in `ls *.conf`; do sed -i -e "1,/server_port/s/server_port.*/server_port 6813/" "$conf"; done
+env CK_VERBOSITY=verbose ./main 6813
+Using server port: 6813.
+Running suite(s): a2
+Succesfully added key 'bad key' to table 'foo'.
+Succesfully added key 'somekey' to table 'foo'.
+Succesfully added key 'somekey1' to table 'foo'.
+Succesfully added key 'somekey2' to table 'bar'.
+Succesfully added key 'somekey1' to table 'foo'.
+Succesfully added key 'somekey2' to table 'bar'.
+Succesfully added key 'somekey3' to table 'joe'.
+Succesfully added key 'somekey' to table 'foo'.
+Succesfully added key 'somekey1' to table 'foo'.
+Succesfully added key 'somekey2' to table 'bar'.
+Succesfully added key 'somekey1' to table 'foo'.
+Succesfully added key 'somekey2' to table 'bar'.
+Succesfully added key 'somekey3' to table 'joe'.
+Succesfully added key 'somekey' to table 'foo'.
+Succesfully added key 'somekey1' to table 'foo'.
+Succesfully added key 'somekey2' to table 'bar'.
+Succesfully added key 'somekey1' to table 'foo'.
+Succesfully added key 'somekey2' to table 'bar'.
+Succesfully added key 'somekey3' to table 'joe'.
+Succesfully added key 'somekey' to table 'foo'.
+Succesfully added key 'somekey' to table 'foo'.
+Succesfully updated key 'somekey' from table 'foo'.
+Succesfully added key 'somekey' to table 'foo'.
+73%: Checks: 49, Failures: 13, Errors: 0
+main.c:175:P:sanity:test_sanity_filemod:0: Passed
+main.c:206:P:config:test_config_onetable:0: Passed
+main.c:213:P:config:test_config_twotables:0: Passed
+main.c:220:P:config:test_config_threetables:0: Passed
+main.c:231:P:config:test_config_duplicatetable:0: Passed
+main.c:238:P:config:test_config_duplicateport:0: Passed
+main.c:245:P:config:test_config_duplicatehost:0: Passed
+main.c:258:P:config:test_config_nousername:0: Passed
+main.c:265:P:config:test_config_duplicatusername:0: Passed
+main.c:497:P:conn:test_conn_basic:0: Passed
+main.c:506:P:conn:test_conn_connectnoserver:0: Passed
+main.c:514:F:conninvalid:test_conninvalid_connectinvalidparam:0: storage_connect with invalid param not setting errno properly.
+main.c:521:F:conninvalid:test_conninvalid_disconnectinvalidparam:0: storage_disconnect with invalid param should fail.
+main.c:293:P:auth:test_auth_validusername_validpassword:0: Passed
+main.c:309:P:auth:test_auth_invalidusername_validpassword:0: Passed
+main.c:325:P:auth:test_auth_validusername_invalidpassword:0: Passed
+main.c:341:P:auth:test_auth_invalidusername_invalidpassword:0: Passed
+main.c:357:F:auth:test_auth_with_null_params:0: storage_auth() with NULL username not setting errno to ERR_INVALID_PARAM
+main.c:386:P:auth:test_storage_get_without_authentication:0: Passed
+main.c:404:P:auth:test_storage_set_without_authentication:0: Passed
+main.c:439:P:auth:test_client1_auths_disconnects_client2_calls_storage_get_without_authentication:0: Passed
+main.c:475:P:auth:test_client1_auths_disconnects_client2_calls_storage_set_without_authentication:0: Passed
+main.c:540:F:getinvalid:test_getinvalid_invalidtable:0: storage_get with invalid param not setting errno properly.
+main.c:550:F:getinvalid:test_getinvalid_invalidkey:0: storage_get with invalid param not setting errno properly.
+main.c:558:F:getinvalid:test_getinvalid_invalidrecord:0: storage_get with invalid param not setting errno properly.
+main.c:567:P:getinvalid:test_getinvalid_invalidconn:0: Passed
+main.c:576:F:getinvalid:test_getinvalid_badtable:0: storage_get with bad table name not setting errno properly.
+main.c:585:F:getinvalid:test_getinvalid_badkey:0: storage_get with bad key name not setting errno properly.
+main.c:594:P:getmissing:test_getmissing_missingtable:0: Passed
+main.c:603:P:getmissing:test_getmissing_missingkey:0: Passed
+main.c:620:F:setinvalid:test_setinvalid_invalidtable:0: storage_set with invalid param not setting errno properly.
+main.c:631:P:setinvalid:test_setinvalid_invalidkey:0: Passed
+main.c:641:P:setinvalid:test_setinvalid_invalidconn:0: Passed
+main.c:651:F:setinvalid:test_setinvalid_badtable:0: storage_set with bad table name not setting errno properly.
+main.c:660:F:setinvalid:test_setinvalid_badkey:0: storage_set with bad key name should fail.
+main.c:671:P:setmissing:test_setmissing_missingtable:0: Passed
+main.c:680:F:setmissing:test_setmissing_deletemissingkey:0: Deleting a missing key not setting errno properly.
+main.c:709:P:oneserver:test_oneserver_onetable:0: Passed
+main.c:745:P:oneserver:test_oneserver_twotables:0: Passed
+main.c:792:P:oneserver:test_oneserver_threetables:0: Passed
+main.c:838:P:restartserver:test_restartserver_onetable:0: Passed
+main.c:887:P:restartserver:test_restartserver_twotables:0: Passed
+main.c:943:P:restartserver:test_restartserver_threetables:0: Passed
+main.c:990:P:restartclient:test_restartclient_onetable:0: Passed
+main.c:1040:P:restartclient:test_restartclient_twotables:0: Passed
+main.c:1101:P:restartclient:test_restartclient_threetables:0: Passed
+main.c:1135:P:set:test_set_valwithspc:0: Passed
+main.c:1163:P:set:test_set_update:0: Passed
+main.c:1184:F:set:test_set_delete:0: Error deleting the key/value pair.
+./procresults

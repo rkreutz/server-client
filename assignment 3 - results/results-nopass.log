@@ -1,0 +1,6 @@
+main.c:369:F:configerror:test_configerror_badtype2:0: Server should exit due to error in config file.
+main.c:147:S:query:test_query_int0:0: Couldn't connect to server.
+main.c:938:F:query:test_query_int2b:0: No extra keys should be modified.
+main.c:1576:F:restartserver_bonus:test_restartserver_threecols_bonus:0: Error getting a value.
+main.c:1625:F:restartserver_bonus:test_restartserver_fourcols_bonus:0: Error getting a value.
+main.c:1677:F:restartserver_bonus:test_restartserver_sixcols_bonus:0: Error getting a value.
